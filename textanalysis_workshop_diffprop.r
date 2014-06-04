@@ -34,9 +34,9 @@ sorted <- data[with(data,order(data$diff)),] #sorts data by column diff
 row.names(sorted)[1:40] #prints first row names, the top 40 words define your second file
 row.names(sorted)[2741:2782] #prints last row names, change the numbers to be the last 40 rows, the top 40 words definine your first file
 
-#red <- sapply(sorted, function(x) `*`(x[1:40], 1000))
+
 first_rows <- cbind(row.names(sorted)[1:40], sorted[1:40,3]) #prints last row names
-last_rows <- cbind(row.names(sorted)[3455:3494], sorted[3455:3494,3]) #prints last row names, change the numbers to fit your matrix
+last_rows <- cbind(row.names(sorted)[2741:2782], sorted[2741:2782,3]) #prints last row names, change the numbers to fit your matrix
 
 write.csv(first_rows, file = "diffprop_women_terms.csv") #writes csv file with the first rows and weights
 write.csv(last_rows, file = "diffprop_men_terms.csv") #dito with the last rows

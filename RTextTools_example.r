@@ -71,7 +71,6 @@ summary(analytics)
 # analytics@ensemble_summary: SUMMARY OF ENSEMBLE PRECISION/COVERAGE. USES THE n VARIABLE PASSED INTO create_analytics()
 
 
-
 create_ensembleSummary(analytics@document_summary)
 
 
@@ -92,3 +91,4 @@ TREE <- cross_validate(container, 4, "TREE")
 #Export output to CSV file. You can export any of the analytics variables
 
 write.csv(analytics@document_summary, "DocumentSummary.csv")
+head(USCongress)
